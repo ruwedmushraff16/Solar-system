@@ -1,0 +1,31 @@
+Built in Functions
+1. glutInit ()
+glutInit is used to initialize the GLUT library.
+Usage: void glutInit (int *argc, char **argv);
+Description: glutInit will initialize the GLUT library and negotiate a session with the
+window system.
+2. glutInitDisplayMode ()
+glutInitDisplayMode sets the initial display mode.
+Usage: void glutInitDisplayMode (unsigned int mode);
+Mode-Display mode, normally the bitwise OR-ing GLUT display mode bit masks.
+
+Description: The initial display mode is used when creating top-level windows, sub-
+windows, and overlays to determine the OpenGL display mode for the to-be created
+
+window or overlay.
+3. glutCreateWindow ()
+glutCreateWindow creates a top-level window.
+Usage: intglutCreateWindow (char *name);
+Name-ASCII character string for use as window name
+Description: glutCreateWindow creates a top-level window. The name will be
+provided to the window system as the window’s name. The intent is that the window
+system will label the window with the name. Implicitly, the current window is set to the
+newly created window.
+Each created window has a unique associated OpenGL context.
+4. glutDisplayFunc ()
+glutDisplayFunc sets the display call-back for the current window.
+Usage: void glutDisplayFunc (void(*func) (void));
+Func: The new display callback function.
+Description: glutDisplayFunc sets the display callback for the current window. When
+GLUT determines that the normal plane for the window needs to be redisplayed, the
+display callback for the window is called. Before the callback, the current window is set
